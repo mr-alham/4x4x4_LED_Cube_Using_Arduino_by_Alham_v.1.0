@@ -1,4 +1,4 @@
-###4x4x4_LED_Cube_Using_Arduino_by_Alham_v.1.0
+### 4x4x4_LED_Cube_Using_Arduino_by_Alham_v.1.0
   Satisfying beautiful **4x4x4 Led Cube**. We can use any of arduino boards for this.Either Arduino uno or Arduino nano Arduino boards are well suits for this project 
   
   ##### follow on: 
@@ -7,7 +7,7 @@
 ##### contact on: 
 > [alham@duck.com](alham@duck.com)
 
-#####parts
+##### parts
 * Arduino Nano/uno
 * LEDs 64
 * Some wires
