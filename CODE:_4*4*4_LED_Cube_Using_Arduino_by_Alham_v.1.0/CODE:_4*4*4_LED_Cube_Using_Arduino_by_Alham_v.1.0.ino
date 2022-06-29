@@ -2,8 +2,8 @@
 // code written by alham,
 // last modified date: 2022 June
 // follow on,
-// twitter :-https://twitter.com/alham__aa
-// github :-https://github.com/MrAlham
+//          twitter :-https://twitter.com/alham__aa
+//          github :-https://github.com/MrAlham
 //contact from: alham@duck.com
 
 //                    ______
