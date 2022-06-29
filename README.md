@@ -1,20 +1,49 @@
-### 4x4x4_LED_Cube_Using_Arduino_by_Alham_v.1.0
-  Satisfying beautiful **4x4x4 Led Cube**. We can use any of arduino boards for this.Either Arduino uno or Arduino nano Arduino boards are well suits for this project 
+# 4x4x4_LED_Cube_Using_Arduino_by_Alham_v.1.0
+  * Satisfying beautiful **4x4x4 Led Cube**. We can use any of arduino boards for this.Either Arduino uno or Arduino nano Arduino boards are well suits for this project 
   
   ##### follow on: 
 > [twitter](https://twitter.com/alham__aa)
 > [github](https://github.com/MrAlham)
 ##### contact on: 
-> [alham@duck.com](alham@duck.com)
+> [alham@duck.com](mailto:alham@duck.com)
 
-##### parts
-* Arduino Nano/uno
-* LEDs 64
-* Some wires
-* dot board
-* usb cable *if you intended to power from a external power supply
+### parts
+  * Arduino Nano/uno
+  * LEDs 64
+  * Some wires
+  * dot board
+  * usb cable *if you intended to power from a external power supply
+  * 
 
+ first you should make structre to hold LEDs 
+ and carefully solder LEDs as layers
 
+### Circuit Diagram
+  * #### Columns  
+    > * **tx**  pin to **_column_** **1**                    
+    > * **rx**  pin to **_column_** **2**                    
+    > * **D3** pin to **_column_** **3**                    
+    > * **D4** pin to **_column_** **4**                    
+    > * **D5** pin to **_column_** **5**
+    > * **D6** pin to **_column_** **6**
+    > * **D7** pin to **_column_** **7**
+    > * **D8** pin to **_column_** **8**
+    > * **D9** pin to **_column_** **9**
+    > * **D10** pin to **_column_** **10**
+    > * **D11** pin to **_column_** **11**
+    > * **D12** pin to **_column_** **12**
+    > * **D13** pin to **_column_** **13**
+    > * **DA0** pin to **_column_** **14**
+    > * **DA1** pin to **_column_** **15**
+    > * **DA2** pin to **_column_** **16**
+  * #### Layers  
+    > * **A3** pin to **_layer_** **1**
+    > * **A4** pin to **_layer_** **2**
+    > * **A5** pin to **_layer_** **3**
+    > * **A6** pin to **_layer_** **4**
+    > 
+
+### Code for the cube
 ```c++
 // 4*4*4_LED_Cube_Using_Arduino_by_Alham_v.1.0
 // code written by alham,
