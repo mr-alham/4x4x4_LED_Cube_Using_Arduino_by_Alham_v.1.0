@@ -2,21 +2,21 @@
 // code written by alham,
 // last modified date: 2022 June
 // follow on,
-//          twitter :-https://twitter.com/alham__aa
-//          github :-https://github.com/MrAlham
+// twitter :-https://twitter.com/alham__aa
+// github :-https://github.com/MrAlham
 //contact from: alham@duck.com
 
 //                    ______
 //                    |    |
-//                    |    |                              plan (bottom view)                side view
+//                    |    |                              plan (bottom view)              side view
 //              ______|    |______
-// column_14 -~ | D13        D12 | ~- column_13       l  |C_13  C_14 C_15 C_16          layer_4   |x x x
-//           -~ |            D11 | ~- column_12       e  |C_09  C_10 C_11 C_12          layer_3   |x x x
-//           -~ |            D10 | ~- column_11       f  |C_05  C_06 C_07 C_08          layer_2   |x x x
-// column_15 -~ | A0    A     D9 | ~- column_10       t  |C_01  C_02 C_03 C_04          layer_1   |x x x
-// column_16 -~ | A1    R     D8 | ~- column_9             ---   ---  ---  ---                     - - -
+// column_14 -~ | D13        D12 | ~- column_13       l  |C_13  C_14 C_15 C_16          layer_4 |x x x
+//           -~ |            D11 | ~- column_12       e  |C_09  C_10 C_11 C_12          layer_3 |x x x
+//           -~ |            D10 | ~- column_11       f  |C_05  C_06 C_07 C_08          layer_2 |x x x
+// column_15 -~ | A0    A     D9 | ~- column_10       t  |C_01  C_02 C_03 C_04          layer_1 |x x x
+// column_16 -~ | A1    R     D8 | ~- column_9             ---   ---  ---  ---                   - - -
 //   layer_1 -~ | A2    D     D7 | ~- column_8                   front
-//   layer_2 -~ | A3    U     D6 | ~- column_7                * c= column                   * x= LED
+//   layer_2 -~ | A3    U     D6 | ~- column_7                * c= column                 * x= LED
 //   layer_3 -~ | A4    I     D5 | ~- column_6
 //   layer_4 -~ | A5    N     D4 | ~- column_5
 //           -~ | A6    O     D3 | ~- column_4
@@ -43,7 +43,7 @@ void setup() {  //this will run only once at startup
   }
   randomSeed(analogRead(10));  //randomly seeding for RANDOM PATTERN
 
-  for (int i = 0; i != 220; i += 2) { //before start cube will light for random pattern
+  for (int i = 0; i != 350; i += 2) { //before start cube will light for random pattern
     int random_layer = random(0, 4);
     int random_column = random(0, 16);
 
@@ -75,11 +75,11 @@ void loop() {  //things in loop function will run again and again and again repe
   propeller();  //11
   spiral_in_and_out();  //12
   diagonal_rectangle();  //13
+  random_pattern();  //14
   delay(1500);
 
 
 }
-
 void off_the_cube() {  //this function will turn off whole cube
   for (int i = 0; i < 16; i++) {
     digitalWrite(column[i], HIGH);
@@ -839,6 +839,19 @@ void on_all_layers() {  //this function will turn on all layers
 
   }
 }
+void random_pattern() {  //this function will on and off led's randomly
+  for (int i = 0; i != 350; i += 2) {
+    int random_layer = random(0, 4);
+    int random_column = random(0, 16);
 
+    digitalWrite(column[random_column], HIGH);
+    digitalWrite(layer[random_layer], HIGH);
+    delay(6);
+    digitalWrite(column[random_column], LOW);
+    digitalWrite(layer[random_layer], LOW);
+    delay(6);
+
+  }
+}
 
 //END of the code.
