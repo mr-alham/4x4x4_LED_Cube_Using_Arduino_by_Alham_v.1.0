@@ -1,4 +1,50 @@
+###4x4x4_LED_Cube_Using_Arduino_by_Alham_v.1.0
+  Satisfying beautiful **4x4x4 Led Cube**. We can use any of arduino boards for this.Either Arduino uno or Arduino nano Arduino boards are well suits for this project 
+  
+  ##### follow on: 
+> [twitter](https://twitter.com/alham__aa)
+> [github](https://github.com/MrAlham)
+##### contact on: 
+> [alham@duck.com](alham@duck.com)
+
+#####parts
+* Arduino Nano/uno
+* LEDs 64
+* Some wires
+* dot board
+* usb cable *if you intended to power from a external power supply
+
+
 ```c++
+// 4*4*4_LED_Cube_Using_Arduino_by_Alham_v.1.0
+// code written by alham,
+// last modified date: 2022 June
+// follow on,
+// twitter :-https://twitter.com/alham__aa
+// github :-https://github.com/MrAlham
+//contact from: alham@duck.com
+
+//                    ______
+//                    |    |
+//                    |    |                              plan (bottom view)              side view
+//              ______|    |______
+// column_14 -~ | D13        D12 | ~- column_13       l  |C_13  C_14 C_15 C_16          layer_4 |x x x
+//           -~ |            D11 | ~- column_12       e  |C_09  C_10 C_11 C_12          layer_3 |x x x
+//           -~ |            D10 | ~- column_11       f  |C_05  C_06 C_07 C_08          layer_2 |x x x
+// column_15 -~ | A0    A     D9 | ~- column_10       t  |C_01  C_02 C_03 C_04          layer_1 |x x x
+// column_16 -~ | A1    R     D8 | ~- column_9             ---   ---  ---  ---                   - - -
+//   layer_1 -~ | A2    D     D7 | ~- column_8                   front
+//   layer_2 -~ | A3    U     D6 | ~- column_7                * c= column                 * x= LED
+//   layer_3 -~ | A4    I     D5 | ~- column_6
+//   layer_4 -~ | A5    N     D4 | ~- column_5
+//           -~ | A6    O     D3 | ~- column_4
+//           -~ | A7          D2 | ~- column_3
+//           -~ | 5V    N    GND | ~-
+//           -~ |       A        | ~-
+//           -~ | GND   N     RX | ~- column_2
+//           -~ | VIN   O     TX | ~- column_1
+//              ------------------
+
 #include<Arduino.h>
 
 int column[16] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, A0, A1}; //initializing and declaring led rows
@@ -825,6 +871,6 @@ void random_pattern() {  //this function will on and off led's randomly
 
   }
 }
-```
-//END of the code.
 
+//END of the code.
+```
